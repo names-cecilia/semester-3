@@ -1,10 +1,10 @@
 //superclass
 public class Mahasiswa {
     //mendeklarasikan variabel beserta datatype
-    public String Nama;
-    public String NIM ; 
+    protected String Nama;
+    protected String NIM ; 
     //NIM dalam bentuk string karena angka tidak diproses
-    public float IPK;
+    protected float IPK;
  
     public Mahasiswa(String Nama, String NIM, float IPK){
         this.Nama = Nama;
@@ -64,15 +64,15 @@ public class Mahasiswa {
 
 
 //subclass kedua
-public class Mahasiswa_S3 extends Mahasiswa{
-    public Mahasiswa_S3(String Nama, String NIM, float IPK){
+public class Mahasiswa_S2 extends Mahasiswa{
+    public Mahasiswa_S2(String Nama, String NIM, float IPK){
         super(Nama, NIM, IPK); //variabel dari superclass
     }
     
     //menghitung ipk apakah cumlaude atau tidak
     //disimpan dalam public method
     public void isCumlaude(){
-        if (IPK > 3.90) {
+        if (IPK > 3.75) {
             System.out.println("Mahasiswa Cumlaude");
         } else {
             System.out.println("Tidak Cumlaude");
